@@ -9,6 +9,8 @@
             4.2 + 2 * 3 / 3 - 6.1 = 0.1
             3 + 4 * 2 / ( 1 - 5 ) ^ 2 = 3.5
             1 + 2 * ( 3 + 4 / 2 - ( 1 + 2 ) ) * 2 + 1 = 10
+            
+            
 Обработка исключений:            
             1 + 2 * ( 3 + 4 / 2 - ( 1 + 2 ) ) * 2 ++ 1 выводит ошибку :com.epam.izh.rd.online.exception.MathematicSymbolException: Неподдерживаемая операция ++
             abv = com.epam.izh.rd.online.exception.WrongInputStringExpression: Некорректно введено выражение (предоставляется возможность повторного ввода выражения)
