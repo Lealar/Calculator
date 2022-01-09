@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.132" tests="9" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="D:\Epam\Calculator\target\test-classes;D:\Epam\Calculator\target\classes;C:\Users\Vladislav Mesnyankin\.m2\repository\org\hamcrest\hamcrest-all\1.3\hamcrest-all-1.3.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-suite\1.8.2\junit-platform-suite-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.2\junit-platform-suite-api-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.8.2\junit-platform-suite-engine-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-runner\1.8.2\junit-platform-runner-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.2\junit-platform-launcher-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.8.2\junit-platform-suite-commons-1.8.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_301\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Vladislav Mesnyankin\AppData\Local\Temp\surefire8760951986478045912\surefirebooter8895889365154938164.jar C:\Users\Vladislav Mesnyankin\AppData\Local\Temp\surefire8760951986478045912 2022-01-09T12-29-26_888-jvmRun1 surefire8548350973868479238tmp surefire_05404077926324107011tmp"/>
+    <property name="surefire.test.class.path" value="D:\Epam\Calculator\target\test-classes;D:\Epam\Calculator\target\classes;C:\Users\Vladislav Mesnyankin\.m2\repository\org\hamcrest\hamcrest-all\1.3\hamcrest-all-1.3.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-suite\1.8.2\junit-platform-suite-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.2\junit-platform-suite-api-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.8.2\junit-platform-suite-engine-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-runner\1.8.2\junit-platform-runner-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-launcher\1.8.2\junit-platform-launcher-1.8.2.jar;C:\Users\Vladislav Mesnyankin\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.8.2\junit-platform-suite-commons-1.8.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Vladislav Mesnyankin"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_301\jre"/>
+    <property name="basedir" value="D:\Epam\Calculator"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Vladislav Mesnyankin\AppData\Local\Temp\surefire8760951986478045912\surefirebooter8895889365154938164.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_301\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_301\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_301\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_301\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_301\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_301\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_301\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_301\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_301-b09"/>
+    <property name="user.name" value="Vladislav Mesnyankin"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_301\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Vladislav Mesnyankin\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\VLADIS~1\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2021.1.3"/>
+    <property name="java.version" value="1.8.0_301"/>
+    <property name="user.dir" value="D:\Epam\Calculator"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_301\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-15.0.1\bin;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\chromedriver;C:\geckodriver;C:\Program Files\Git\cmd;D:\Lanit\Soft\node-v11.7.0-win-x64;D:\Lanit\Soft\flyway-7.11.4;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Vladislav Mesnyankin\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Vladislav Mesnyankin\AppData\Local\Programs\Python\Python38-32\;C:\Users\Vladislav Mesnyankin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.4\bin;C:\Users\Vladislav Mesnyankin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2021.1.3\bin;;C:\Program Files\Java\jdk1.8.0_301\bin;C:\java\apache-maven-3.8.2\bin;D:\Lanit\Soft\flyway-7.11.4;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.301-b09"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_301\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="solveExpression_ThrowException{String}[1]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.047"/>
+  <testcase name="solveExpression_ThrowException{String}[2]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.005"/>
+  <testcase name="solveExpression_ThrowException{String}[3]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.002"/>
+  <testcase name="solveExpression_ThrowException{String}[4]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.001"/>
+  <testcase name="solveExpression_ThrowException{String}[5]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.002"/>
+  <testcase name="solveExpression{String, Double}[1]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.005"/>
+  <testcase name="solveExpression{String, Double}[2]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.001"/>
+  <testcase name="solveExpression{String, Double}[3]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.003"/>
+  <testcase name="solveExpression{String, Double}[4]" classname="com.epam.izh.rd.online.repository.JavaCalculatorTest" time="0.002"/>
+</testsuite>
