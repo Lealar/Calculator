@@ -9,12 +9,11 @@ import java.util.regex.Pattern;
 public class ParserString {
 
     /**
-     * Разбивает строку на пробелы
+     * Разбивает строку в массив по пробелам
      */
-    public static List<String> getExpressionAsArray() {
-        List<String> expressionArr = new ArrayList<>(Arrays.asList(InputExpressionFromConsole.readInputString().split(" +")));
+    public static List<String> getExpressionAsArray(String expression) {
+        List<String> expressionArr = new ArrayList<>(Arrays.asList(expression.split(" +")));
         parseBrackets(expressionArr);
-        Validation.validationArray(expressionArr);
         return expressionArr;
     }
 
@@ -25,7 +24,6 @@ public class ParserString {
      * -2 - ( -4 * 3.5 )
      */
     public static void parseBrackets(List<String> expressionArr) {
-
         for (int i = 0; i < expressionArr.size(); i++) {
             String elem = expressionArr.get(i);
             if (elem.matches("\\(*-?[.\\d]+\\)*")) {

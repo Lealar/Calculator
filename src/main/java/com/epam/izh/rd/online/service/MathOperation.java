@@ -2,6 +2,7 @@ package com.epam.izh.rd.online.service;
 
 import com.epam.izh.rd.online.exception.DivisionByZero;
 import com.epam.izh.rd.online.exception.MathematicSymbolException;
+import com.epam.izh.rd.online.exception.UnsupportedMathOperationException;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,28 +24,29 @@ public class MathOperation {
         operationPriority.put("^", 3);
     }
 
-    public static Set<String> getAvaibleOperation() {
+    public static Set<String> getAvailableOperation() {
         return operationPriority.keySet();
     }
-
-    public static void addOperationPriority(String sign, Integer priority) {
-        operationPriority.put(sign, priority);
-    }
-
 
     public static Integer getOperationPriority(String operation) {
         return operationPriority.get(operation);
     }
 
-    public static boolean isAddElem(String newElem, String elemFromStack) {
-        if (operationPriority.get(elemFromStack) == null && operationPriority.get(elemFromStack) == null) {
+    /*
+     * Принимает две мат. операции
+     * (e.x. сложение и умножение)
+     * и возвращает является ли приоритет первой операции выше
+     *
+     * */
+    public static boolean compareOperations(String newElem, String elemFromStack) {
+        if (operationPriority.get(newElem) == null | operationPriority.get(elemFromStack) == null) {
             String exceptionMessage = operationPriority.get(elemFromStack) == null ? elemFromStack : newElem;
-            try {
-                throw new MathematicSymbolException("Неподдерживаемая операция " + exceptionMessage);
-            } catch (MathematicSymbolException e) {
+            /*try {*/
+            throw new MathematicSymbolException("Неподдерживаемая операция " + exceptionMessage);
+            /*} catch (MathematicSymbolException e) {
                 e.printStackTrace();
                 System.exit(1);
-            }
+            }*/
         }
         return operationPriority.get(newElem) > operationPriority.get(elemFromStack);
     }
@@ -66,19 +68,14 @@ public class MathOperation {
             case "*":
                 return Double.parseDouble(secondOperand) * Double.parseDouble(firstOperand);
             case "/":
-                try {
-                    if (firstOperand.equals("0")) {
-                        throw new DivisionByZero("Деление на ноль запрещено");
-                    }
-                } catch (DivisionByZero divisionByZero) {
-                    divisionByZero.printStackTrace();
-                    System.exit(1);
+                if (firstOperand.equals("0")) {
+                    throw new DivisionByZero("Деление на ноль запрещено");
                 }
-
                 return Double.parseDouble(secondOperand) / Double.parseDouble(firstOperand);
             case "^":
                 return Math.pow(Double.parseDouble(secondOperand), Double.parseDouble(firstOperand));
+            default:
+                throw new UnsupportedMathOperationException("Данная операция не поддерживается: " + operation);
         }
-        return null;
     }
 }

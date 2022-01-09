@@ -1,22 +1,34 @@
 package com.epam.izh.rd.online.repository;
 
 import com.epam.izh.rd.online.exception.WrongInputStringExpression;
+import com.epam.izh.rd.online.service.InputExpressionFromConsole;
 import com.epam.izh.rd.online.service.MathOperation;
 import com.epam.izh.rd.online.service.ParserString;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.*;
+import java.util.List;
+import java.util.Objects;
+import java.util.Stack;
 
 /**
  * Основной класс производящий выисления
  */
 public class JavaCalculator {
-    private String mathematicalExpressionAsString;
 
-    public Double calculate() {
+    public Double solveExpressionFromConsole() throws IllegalArgumentException {
+        return calculate(InputExpressionFromConsole.readInputString());
+    }
 
-        List<String> mathematicalExpressionAsArr = ParserString.getExpressionAsArray();
+    public Double solveExpression(String expression) throws IllegalArgumentException {
+        InputExpressionFromConsole.isUnValidInput(expression);
+        return calculate(expression);
+    }
+
+
+    private Double calculate(String expression) {
+        List<String> mathematicalExpressionAsArr = ParserString.getExpressionAsArray(
+                expression);
 
         Stack<String> number = new Stack<>();   // Стэк для чисел
         Stack<String> signs = new Stack<>();    // Стэк для мат. операций
@@ -35,10 +47,10 @@ public class JavaCalculator {
             } else { //Если элемент мат. операция
                 if (signs.empty()) { //Если стек пуст добавить операцию в стек
                     signs.push(elem);
-                } else if (MathOperation.isAddElem(elem, signs.peek())) { //Если приоритет данной операции выше добавить в стек
+                } else if (MathOperation.compareOperations(elem, signs.peek())) { //Если приоритет данной операции выше добавить в стек
                     signs.push(elem);
                 } else {
-                    while (!signs.empty() && !MathOperation.isAddElem(elem, signs.peek())) { //Проводить вычисления до тех пор, пока не встретится операция с более высоким приоритетом
+                    while (!signs.empty() && !MathOperation.compareOperations(elem, signs.peek())) { //Проводить вычисления до тех пор, пока не встретится операция с более высоким приоритетом
                         checkStackSize(number, signs);
                         number.push(MathOperation.doMathOperation(signs.pop(), number.pop(), number.pop()).toString());
                     }
@@ -56,22 +68,10 @@ public class JavaCalculator {
     }
 
 
-    public String getMathematicalExpressionAsString() {
-        return mathematicalExpressionAsString;
-    }
-
     private void checkStackSize(Stack<String> number, Stack<String> signs) {
         if (signs.size() == 0 || number.size() <= 1) {
-            try {
-                throw new WrongInputStringExpression("Некорректно введено выражение");
-            } catch (WrongInputStringExpression wrongInputStringExpression) {
-                wrongInputStringExpression.printStackTrace();
-                System.exit(1);
-            }
+            throw new WrongInputStringExpression("Некорректно введено выражение");
         }
     }
 
-    public void setMathematicalExpressionAsString(String mathematicalExpressionAsString) {
-        this.mathematicalExpressionAsString = mathematicalExpressionAsString;
-    }
 }
